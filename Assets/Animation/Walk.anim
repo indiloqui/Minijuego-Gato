@@ -22,28 +22,26 @@ AnimationClip:
     curve:
     - time: 0
       value: {fileID: -254169148, guid: 48f786bb3656d214ea5f0da794936c33, type: 3}
-    - time: 0.16666667
+    - time: 0.22
       value: {fileID: -728125083, guid: 48f786bb3656d214ea5f0da794936c33, type: 3}
-    - time: 0.33333334
+    - time: 0.46
       value: {fileID: 1683229, guid: 48f786bb3656d214ea5f0da794936c33, type: 3}
-    - time: 0.5
+    - time: 0.68
       value: {fileID: -1670600875, guid: 48f786bb3656d214ea5f0da794936c33, type: 3}
-    - time: 0.6666667
+    - time: 0.92
       value: {fileID: 1951145244, guid: 48f786bb3656d214ea5f0da794936c33, type: 3}
-    - time: 0.8333333
+    - time: 1.14
       value: {fileID: 100297296, guid: 48f786bb3656d214ea5f0da794936c33, type: 3}
-    - time: 1
+    - time: 1.38
       value: {fileID: -1505254436, guid: 48f786bb3656d214ea5f0da794936c33, type: 3}
-    - time: 1.1666666
+    - time: 1.6
       value: {fileID: -748725566, guid: 48f786bb3656d214ea5f0da794936c33, type: 3}
-    - time: 1.3333334
-      value: {fileID: -254169148, guid: 48f786bb3656d214ea5f0da794936c33, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
     flags: 2
-  m_SampleRate: 60
+  m_SampleRate: 50
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -68,13 +66,12 @@ AnimationClip:
     - {fileID: 100297296, guid: 48f786bb3656d214ea5f0da794936c33, type: 3}
     - {fileID: -1505254436, guid: 48f786bb3656d214ea5f0da794936c33, type: 3}
     - {fileID: -748725566, guid: 48f786bb3656d214ea5f0da794936c33, type: 3}
-    - {fileID: -254169148, guid: 48f786bb3656d214ea5f0da794936c33, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1.35
+    m_StopTime: 1.62
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -93,4 +90,18 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0.46
+    functionName: Step
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 1.14
+    functionName: Step
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

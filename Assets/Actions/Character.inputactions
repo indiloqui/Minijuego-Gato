@@ -1,0 +1,56 @@
+{
+    "name": "Character",
+    "maps": [
+        {
+            "name": "Character",
+            "id": "fcd16138-f88e-4e41-962b-ccfc586ab989",
+            "actions": [
+                {
+                    "name": "Walk",
+                    "type": "Value",
+                    "id": "07e68163-2be3-4581-97ba-93050859ef11",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "AD",
+                    "id": "b9865b37-d862-465c-bed9-cdec38bf28ef",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Walk",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "3b7b1752-2634-42c1-9589-3e67118497a5",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Walk",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "c0f0a00b-aeb8-4204-8ba6-0f59c4f19962",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Walk",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

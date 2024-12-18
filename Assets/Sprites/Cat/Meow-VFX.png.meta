@@ -126,10 +126,10 @@ TextureImporter:
       name: Meow-VFX_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 16
-        height: 16
+        x: 5
+        y: 6
+        width: 4
+        height: 5
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,8 +137,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 19ef1477ce18d1346822d82c8bb3a998
-      internalID: -786888441
+      spriteID: ff4e0c35c84563d438ca51548794fd45
+      internalID: 1072708424
       vertices: []
       indices: 
       edges: []
@@ -147,10 +147,10 @@ TextureImporter:
       name: Meow-VFX_1
       rect:
         serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
-        height: 16
+        x: 22
+        y: 6
+        width: 4
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,8 +158,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2aa81dd0e443c66489f3291efd0584be
-      internalID: 1321532307
+      spriteID: 8dc2072edd1ed1043b6f76092f044ff9
+      internalID: 968543064
       vertices: []
       indices: 
       edges: []
@@ -168,10 +168,10 @@ TextureImporter:
       name: Meow-VFX_2
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
-        width: 16
-        height: 16
+        x: 41
+        y: 5
+        width: 2
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,8 +179,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 240ff711b9f97ff40b8f114ece101a04
-      internalID: -303595083
+      spriteID: b1a5445d6884b02469b9e843aaace29f
+      internalID: 68509533
       vertices: []
       indices: 
       edges: []
@@ -196,9 +196,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Meow-VFX_0: -786888441
-      Meow-VFX_1: 1321532307
-      Meow-VFX_2: -303595083
+      Meow-VFX_0: 1072708424
+      Meow-VFX_1: 968543064
+      Meow-VFX_2: 68509533
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
