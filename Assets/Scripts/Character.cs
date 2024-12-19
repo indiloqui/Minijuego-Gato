@@ -8,6 +8,7 @@ public class Character : MonoBehaviour
     private Animator animator;
     [SerializeField] private float movementSpeed = 3f;
     [SerializeField] private AudioClip stepClip;
+    [SerializeField] private GameObject meowVFX;
 
     private float moveInput;
     private Rigidbody2D rb;
@@ -21,7 +22,6 @@ public class Character : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         rb.velocity = new Vector2(moveInput * movementSpeed, rb.velocity.y);
@@ -33,7 +33,7 @@ public class Character : MonoBehaviour
         }
     }
 
-    private void OnMove(InputValue Value) 
+    private void OnWalk(InputValue Value) 
     { 
         moveInput = Value.Get<float>();
     }
@@ -41,5 +41,10 @@ public class Character : MonoBehaviour
     public void Step()
     {
         audioSource.PlayOneShot(stepClip);
+    }
+
+    public void Meow()
+    {
+        Instantiate(meowVFX, transform.position, Quaternion.identity);
     }
 }
