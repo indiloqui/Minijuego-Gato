@@ -1,16 +1,29 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Strings : MonoBehaviour
 {
-    [SerializeField] private GameObject efecto;
-    public void OnTriggerEnter2D(Collider2D collision)
+    [SerializeField] private TextMeshProUGUI stringText;
+    private int strings = 0;
+
+    private void Update()
     {
-        if (CompareTag("Character"))
+        string currentScene = SceneManager.GetActiveScene().name;
+
+        if (currentScene == "gatet" && strings == 4)
         {
-            Instantiate(efecto, transform.position, Quaternion.identity);
-            Destroy(gameObject);
+            SceneManager.LoadScene("mapa");
         }
+        else if (currentScene == "mapa" && strings == 7)
+        {
+            SceneManager.LoadScene("win");
+        }
+    }
+
+    public void Puntos()
+    {
+        strings++;
+        stringText.text = strings + "/7";
     }
 }

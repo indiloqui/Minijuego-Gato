@@ -8,11 +8,15 @@ public class Character : MonoBehaviour
 {
    private Animator animator;
    [SerializeField] private float movementSpeed = 3f;
+   [SerializeField] private Strings strings;
+
+
    [SerializeField] private AudioClip stepClip;
    [SerializeField] private AudioClip meowClip;
    [SerializeField] private AudioClip layingClip;
    [SerializeField] private AudioClip stretchingClip;
-    [SerializeField] private AudioClip runClip;
+   [SerializeField] private AudioClip runClip;
+   [SerializeField] private AudioClip stringClip;
 
     private float moveInput;
    private Rigidbody2D rb;
@@ -118,5 +122,15 @@ public class Character : MonoBehaviour
     public void Run()
     {
         audioSource.PlayOneShot(runClip);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("String"))
+        {
+            audioSource.PlayOneShot(stringClip);
+            strings.Puntos();
+            Destroy(collision.gameObject);
+        }
     }
 }

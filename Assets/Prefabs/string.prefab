@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 6723635273752886434}
   - component: {fileID: 6620134568156556985}
   - component: {fileID: 6662168749000255003}
-  - component: {fileID: -4873427033528591925}
+  - component: {fileID: -6733983716451301215}
   m_Layer: 0
   m_Name: string
-  m_TagString: Untagged
+  m_TagString: String
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,11 +28,11 @@ Transform:
   m_GameObject: {fileID: 8076694332139118032}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6620134568156556985
 SpriteRenderer:
@@ -121,7 +121,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.16
---- !u!114 &-4873427033528591925
+--- !u!114 &-6733983716451301215
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -133,3 +133,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccf987d867b4ca442b2464a064cc9492, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stringText: {fileID: 0}
