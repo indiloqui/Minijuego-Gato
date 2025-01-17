@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class Character : MonoBehaviour
 {
    private Animator animator;
    [SerializeField] private float movementSpeed = 3f;
    [SerializeField] private Strings strings;
+   [SerializeField] private GameObject pauseMenu;
 
 
    [SerializeField] private AudioClip stepClip;
@@ -19,19 +21,22 @@ public class Character : MonoBehaviour
    [SerializeField] private AudioClip stringClip;
 
     private float moveInput;
-   private Rigidbody2D rb;
-   private SpriteRenderer spriteRenderer;
-   private AudioSource audioSource;
+    private Rigidbody2D rb;
+    private SpriteRenderer spriteRenderer;
+    private AudioSource audioSource;
+    private bool isPaused = false;
     private void Awake()
     {
             animator = GetComponent<Animator>();
             rb = GetComponent<Rigidbody2D>();
             spriteRenderer = GetComponent<SpriteRenderer>();
             audioSource = GetComponent<AudioSource>();
+            Cursor.lockState = CursorLockMode.Locked;
     }
 
     void Update()
     {
+        if (!isPaused){
         if (!animator.GetBool("Sitting") && !animator.GetBool("Laying") && !animator.GetBool("Stretching"))
         {
             rb.velocity = new Vector2(moveInput * movementSpeed, rb.velocity.y);
@@ -49,6 +54,43 @@ public class Character : MonoBehaviour
         {
             rb.velocity = Vector2.zero;
         }
+        }
+    }
+
+    private void OnMenu(InputValue value)
+    {
+        if(value.isPressed)
+        {
+            TogglePause();
+        }
+    }
+
+    private void TogglePause()
+    {
+        isPaused = !isPaused;
+        pauseMenu.SetActive(isPaused);
+
+        if (isPaused)
+        {
+            Time.timeScale = 0;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+        else
+        {
+            Time.timeScale = 1;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+    }
+
+    public void ResumeGame()
+    {
+        TogglePause();
+    }
+
+    public void ExitToMainMenu()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene("menu");
     }
 
     private void OnWalk(InputValue value)

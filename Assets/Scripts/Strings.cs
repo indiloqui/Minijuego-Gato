@@ -11,13 +11,19 @@ public class Strings : MonoBehaviour
     {
         string currentScene = SceneManager.GetActiveScene().name;
 
-        if (currentScene == "gatet" && strings == 4)
+        if (SceneManager.GetActiveScene().name == "gatet")
         {
-            SceneManager.LoadScene("mapa");
+            if(strings == 4)
+            {
+             SceneManager.LoadScene("nivel2");
+            }
         }
-        else if (currentScene == "mapa" && strings == 7)
+        if (SceneManager.GetActiveScene().name == "nivel2")
         {
-            SceneManager.LoadScene("win");
+            if (strings == 7)
+            {
+                SceneManager.LoadScene("win");
+            }
         }
     }
 
