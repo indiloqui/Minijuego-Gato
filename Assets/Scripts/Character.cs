@@ -41,7 +41,7 @@ public class Character : MonoBehaviour
 
             if (!animator.GetBool("Sitting") && !animator.GetBool("Laying") && !animator.GetBool("Stretching"))
             {
-                bool isRunning = moveInput != 0 && Keyboard.current.shiftKey.isPressed;
+                bool isRunning = moveInput != 0 && (Keyboard.current.shiftKey.isPressed || Gamepad.current.leftShoulder.isPressed);
 
                 float currentSpeed = isRunning ? movementSpeed * 2f : movementSpeed;
 
