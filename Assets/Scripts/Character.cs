@@ -20,6 +20,9 @@ public class Character : MonoBehaviour
    [SerializeField] private AudioClip runClip;
    [SerializeField] private AudioClip stringClip;
 
+    [SerializeField] private AudioClip generalMusicClip;
+    [SerializeField] private AudioClip waterLevelClip;
+
     private float moveInput;
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
@@ -36,24 +39,27 @@ public class Character : MonoBehaviour
 
     void Update()
     {
-        if (!isPaused){
-        if (!animator.GetBool("Sitting") && !animator.GetBool("Laying") && !animator.GetBool("Stretching"))
+        if (!isPaused)
         {
-            rb.velocity = new Vector2(moveInput * movementSpeed, rb.velocity.y);
-            animator.SetBool("Walk", moveInput != 0);
-
-            bool isRunning = moveInput != 0 && Keyboard.current.shiftKey.isPressed;
-            animator.SetBool("Running", isRunning);
-
-            if (moveInput != 0)
+            if (!animator.GetBool("Sitting") && !animator.GetBool("Laying") && !animator.GetBool("Stretching"))
             {
-                spriteRenderer.flipX = moveInput < 0;
+                bool isRunning = moveInput != 0 && Keyboard.current.shiftKey.isPressed;
+
+                float currentSpeed = isRunning ? movementSpeed * 2f : movementSpeed;
+
+                rb.velocity = new Vector2(moveInput * currentSpeed, rb.velocity.y);
+                animator.SetBool("Walk", moveInput != 0);
+                animator.SetBool("Running", isRunning);
+
+                if (moveInput != 0)
+                {
+                    spriteRenderer.flipX = moveInput < 0;
+                }
             }
-        }
-        else
-        {
-            rb.velocity = Vector2.zero;
-        }
+            else
+            {
+                rb.velocity = Vector2.zero;
+            }
         }
     }
 
